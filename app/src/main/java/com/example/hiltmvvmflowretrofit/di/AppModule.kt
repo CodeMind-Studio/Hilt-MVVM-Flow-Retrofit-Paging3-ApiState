@@ -31,7 +31,7 @@ object AppModule {
         val client = OkHttpClient.Builder().addInterceptor(Interceptor { chain ->
             val request: Request = chain.request().newBuilder().addHeader(
                 "api-key",
-                "2b5a385750797a4d7175702b5a4d6336507748434e773d3d3a6330686855474642593064704f4463794d544d304e513d3d"
+                ""
             ).build()
             chain.proceed(request)
 
@@ -46,12 +46,4 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create(gson)).build()
             .create(QuoteApi::class.java)
     }
-
-//    @Provides
-//    @Singleton
-//    fun getQuoteApi(url: String): QuoteApi {
-//        return Retrofit.Builder().baseUrl(url).addConverterFactory(GsonConverterFactory.create())
-//            .build()
-//            .create(QuoteApi::class.java)
-//    }
 }
