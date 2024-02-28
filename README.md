@@ -1,4 +1,4 @@
-This is a Android Project Contain Android Intermediate Topics Cointains:
+This is a Android Project Contain Android Intermediate Topics :
 
 1. MVVM Architecture
 2. Paging 3
